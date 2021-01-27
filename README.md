@@ -16,3 +16,8 @@ Go to your Hetzner Cloud dashboard and select Servers, add server.
 - Additional features: User data: load the [cloud-config.yml](cloud-config.yml) file in this repository
 - SSH key: select your pre-defined SSH key
 - Name: (depending on your need)
+
+
+If you found this useful and you would like to give something small back then please use [this Hetzner referral link](https://hetzner.cloud/?ref=lgUHbXXMojBF).
+
+Thank you!
