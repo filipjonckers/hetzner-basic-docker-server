@@ -19,5 +19,6 @@ Go to your Hetzner Cloud dashboard and select Servers, add server.
 
 
 If you found this useful and you would like to give something small back then please use [this Hetzner referral link](https://hetzner.cloud/?ref=lgUHbXXMojBF).
+As soon as you sign, you'll receive € 20 in cloud credits.
 
 Thank you!
