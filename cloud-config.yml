@@ -1,0 +1,29 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+groups:
+  - docker
+
+packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - gnupg-agent
+  - software-properties-common
+
+runcmd:
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - apt-get update -y
+  - apt-get install -y docker-ce docker-ce-cli containerd.io
+  - curl -L "https://github.com/docker/compose/releases/download/1.28.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+  - systemctl enable docker
+  - systemctl enable containerd
+  - systemctl start docker
+  - systemctl start containerd
+  - systemctl status docker
+  - systemctl status containerd
+
+final_message: "Docker host should be up and running, this took me $UPTIME seconds"
